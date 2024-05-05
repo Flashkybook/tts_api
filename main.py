@@ -2,13 +2,14 @@ from typing import Union
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from tts import Generator
 
 app = FastAPI()
 
 
 @app.get("/")
 def read_root():
+    Generator("hola mundo")
     return {"Hello": "World"}
 
 @app.get("/tts/")

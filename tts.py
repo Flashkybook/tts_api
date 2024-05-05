@@ -3,7 +3,8 @@ from pathlib import Path
 from gtts import gTTS
 
 
-def audiogenerator(word: string):  
+def Generator(word: str):  
+    print("create /tmp", os.path.exists("/tmp"))
 
     # Create path
     if not os.path.exists("/tmp"):
@@ -31,4 +32,8 @@ def audiogenerator(word: string):
         audio.save(path)
 
     respose_audio = open(path, "rb")  # open
+
+    print(respose_audio)
+
+    return respose_audio 
      
