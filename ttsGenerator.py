@@ -9,8 +9,9 @@ def Generator(word: str):
     # Create path
     if not os.path.exists("/tmp"):
         os.mkdir("/tmp")
-        print("create /tmp", os.path.exists("/tmp"))
-
+        # print("create /tmp", os.path.exists("/tmp"))
+    
+    print(os.path.exists("/tmp"))
 
     name = word
     language = "en"
@@ -31,9 +32,7 @@ def Generator(word: str):
         audio = gTTS(text=name, lang=language)
         audio.save(path)
 
-    respose_audio = open(path, "rb")  # open
+    # respose_audio = open(path, "rb")  # open
 
-    print(respose_audio)
-
-    return respose_audio 
+    return path 
      
